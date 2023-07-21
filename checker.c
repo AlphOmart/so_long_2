@@ -42,7 +42,7 @@ static void	set_objs(t_data *data)
 {
 	data->object = malloc(sizeof(t_mapping) * 1);
 	if (!data->object)
-		return (ft_error(data, "Error : setting object\n", 2));
+		return (ft_error(data, "Error : setting object\n", 1));
 	data->object->player = 'P';
 	data->object->items = 'C';
 	data->object->wall = '1';

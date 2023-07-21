@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:13:05 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 20:22:27 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:03:13 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ void	free_map(char **map)
 
 void	ft_free(t_data *data, int n)
 {
-	if (n == 1)
+	if (n == 2)
+		free(data->object);
+	if (n == 1 || n == 2)
 		free_map(data->map_cpy);
-	if (n == 0 || n == 1)
+	if (n == 0 || n == 1 || n == 2)
 		free_map(data->map);
 	free(data);
 }
