@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:23:22 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:26:42 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	check_content(t_data *data)
 		if (ft_strlen(data->map_cpy[y]) != ft_strlen(data->map_cpy[0]))
 			return (free_map(data->map_cpy),
 				ft_error("Error : invalid map,"
-					"should be a paralleloid\n", data, 3));
+					"should be a paralleloid\n", data, 2));
 	}
 }
 
