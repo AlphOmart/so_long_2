@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 20:22:54 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:53:53 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,17 @@ typedef struct s_data
 	int			width;
 	int			height;
 }				t_data;
+/*---checker.c---------------------------------*/
+void	is_valid(t_data *data, int size);
+
 /*---mapping.c---------------------------------*/
 void	mapping(t_data *data, char *argv);
-/*---so_long.c.c-------------------------------*/
-/*---checker.c---------------------------------*/
-void    is_valid(t_data *data, int size);
-/*---so_long.c.c-------------------------------*/
+
+/*---res_lab.c---------------------------------*/
+void	can_be_finished(t_data *data);
+
+
+/*---utils.c-------------------------------*/
 void	free_map(char **map);
 void	ft_free(t_data *data, int n);
 void	ft_error(char *str, t_data *data, int n);
