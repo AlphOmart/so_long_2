@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:30:00 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:31:10 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_is_open(t_data *data, int size)
 //	int	y;
 	int	x;
 
-	x = ft_strlen(data->map_cpy[0]) - 2;
+	x = ft_strlen(data->map_cpy[0]) - 1;
 	write(1, "1 ligne\n", 8);
 	write(1, &data->map_cpy[0][0], x);
 	write(1, "\n2 ligne\n", 9);
