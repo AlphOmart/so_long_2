@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:52:36 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:53:39 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_is_open(t_data *data, int size)
 		x--;
 	}
 	y = -1;
-	x = ft_strlen(data->map_cpy[0]) - 1;
+	x = ft_strlen(data->map_cpy[0]) - 2;
 	while (data->map_cpy[++y])
 		while (data->map_cpy[y][0] == data->object->wall
 		&& data->map_cpy[y][x] == data->object->wall)
