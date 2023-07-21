@@ -62,7 +62,8 @@ typedef struct s_data
 /*---mapping.c---------------------------------*/
 void	mapping(t_data *data, char *argv);
 /*---so_long.c.c-------------------------------*/
-
+/*---checker.c---------------------------------*/
+void    is_valid(t_data *data, int size);
 /*---so_long.c.c-------------------------------*/
 void	free_map(char **map);
 void	ft_free(t_data *data, int n);

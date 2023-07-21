@@ -1,0 +1,34 @@
+#include "so_long.h"
+
+void	ft_is_open(t_data *data, int size)
+{
+	int	y;
+	int	x;
+
+	x = ft_strlen(data->map_cpy[0]) - 1;
+//	printf("%s\n", data->map_cpy[0]);
+//	printf("%s\n", data->map_cpy[size - 1]);
+	while (data->map_cpy[0][x] && data->map_cpy[size - 1][x] && x > 0)
+	{
+		if (data->map_cpy[0][x] != data->object->wall || data->map_cpy[size - 1][x] != data->object->wall)
+		{
+			return (ft_error("map not closed\n", data,3));
+		}
+		x--;
+	}
+	y = -1;
+	x = ft_strlen(data->map_cpy[0]) - 1;
+	while (data->map_cpy[++y])
+		while (data->map_cpy[y][0] == data->object->wall
+		&& data->map_cpy[y][x] == data->object->wall)
+			y++;
+	if (y != size - 1)
+		return (ft_error("Error : map not closed 2\n", data, 2));
+}
+
+void	is_valid(t_data *data, int size)
+{
+	ft_is_open(data, size - 1);
+	//check_content();
+	//can_be_finished(data);
+}

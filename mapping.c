@@ -20,7 +20,6 @@ void	mapping(t_data *data, char *argv)
 	int	j;
 
 	j = get_map_len(argv) + 1;
-	printf("%i", j);
 	if (j == 0)
 		ft_error("Error : file not found\n", data, 0);
 	data->map = calloc(sizeof(char *), j);
@@ -32,6 +31,7 @@ void	mapping(t_data *data, char *argv)
 	get_map(data, data->map, argv);
 	get_map(data, data->map_cpy, argv);
 	j = -1;
+	is_valid(data, j);
 	while (data->map[++j])
 	{
 		printf("%s\n", data->map[j]);
