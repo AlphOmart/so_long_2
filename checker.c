@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:26:50 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:28:08 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_is_open(t_data *data, int size)
 	write(1, "1 ligne\n", 8);
 	write(1, &data->map_cpy[0][0], x);
 	write(1, "\n2 ligne\n", 9);
-	(void)size;
+	printf("size = %i\n", size);
 	//	write(1, &data->map_cpy[size - 4][0], x);
 //	while (data->map_cpy[0][x] && data->map_cpy[size - 2][x] && x > 0)
 //	{
@@ -56,7 +56,6 @@ static void	set_objs(t_data *data)
 
 void	is_valid(t_data *data, int size)
 {
-	(void)size;
 	set_objs(data);
 	ft_is_open(data, size - 1);
 	//check_content();
