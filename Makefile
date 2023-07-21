@@ -13,7 +13,7 @@ MLX			=	$(addprefix $(MLX_PATH), $(MLX_SRC))
 MLX_FLAGS	=	-lX11 -lXext
 MLX_EX		=	$(MLX) $(MLX_FLAGS)
 #---SO_LONG_VAR----------------------------------
-SRC			=	so_long.c mapping.c utils.c checker.c res_lab.c set_unset_pic.c
+SRC			=	so_long.c mapping.c utils.c checker.c res_lab.c set_unset_pic.c move.c
 OBJS_DIR	=	.OBJS/
 OBJS		=	$(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 HEADER		=	so_long.h
