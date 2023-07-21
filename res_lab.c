@@ -6,13 +6,12 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 22:43:48 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:22:16 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:43:28 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int	*get_pos(t_data *data, char **map, int *pos, char c);
 static void	resolution(char **map, int x, int y);
 
 void	can_be_finished(t_data *data)
@@ -36,7 +35,7 @@ void	can_be_finished(t_data *data)
 	free(start);
 }
 
-static int	*get_pos(t_data *data, char **map, int *pos, char c)
+int	*get_pos(t_data *data, char **map, int *pos, char c)
 {
 	int	y;
 	int	x;

@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:53:53 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:42:04 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "libft/libft.h"
 # include "minilibx-linux/mlx.h"
 # include "minilibx-linux/mlx_int.h"
+
 /*---STRUCTURES--------------------------------*/
 typedef struct s_pictures
 {
@@ -59,18 +60,25 @@ typedef struct s_data
 	int			width;
 	int			height;
 }				t_data;
+
 /*---checker.c---------------------------------*/
 void	is_valid(t_data *data, int size);
 
 /*---mapping.c---------------------------------*/
 void	mapping(t_data *data, char *argv);
 
+/*---render.c----------------------------------*/
+void	print_window(t_data *data);
+
 /*---res_lab.c---------------------------------*/
 void	can_be_finished(t_data *data);
-
-
-/*---utils.c-------------------------------*/
+int		*get_pos(t_data *data, char **map, int *pos, char c);
+/*---set_unset_pic.c---------------------------*/
+void	set_pic(t_data *data);
+int		finish_game(t_data *data);
+/*---utils.c-----------------------------------*/
 void	free_map(char **map);
 void	ft_free(t_data *data, int n);
 void	ft_error(char *str, t_data *data, int n);
+
 #endif

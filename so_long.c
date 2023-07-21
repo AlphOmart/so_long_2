@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:56:17 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:37:43 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ int	main(int argc, char **argv)
 	if (!data)
 		return ((int)write(2, "Error : data initialisation\n", 28));
 	mapping(data, argv[1]);
-	j = -1;
-	while (data->map[++j])
-		printf("%s\n", data->map[j]);
-	j = -1;
-	while (data->map[++j])
-		printf("%s\n", data->map_cpy[j]);
-	ft_free(data, 2);
+	data->mlx_ptr = mlx_init();
+	if (data->map)
+	{
+		set_pic(data);
+	}
+	else
+		finish_game(data);
+	ft_free(data, 3);
 	return (0);
 }
