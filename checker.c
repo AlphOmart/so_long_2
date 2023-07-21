@@ -6,11 +6,43 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:15:10 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:21:41 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	check_content(t_data *data)
+{
+	int	x;
+	int	y;
+
+	y = -1;
+	while (data->map_cpy[++y])
+	{
+		x = -1;
+		while (data->map_cpy[y][++x])
+		{
+			if (data->map_cpy[y][x] == data->object->path ||
+				data->map_cpy[y][x] == data->object->wall ||
+				data->map_cpy[y][x] == '\n')
+				;
+			else if (data->map_cpy[y][x] == data->object->player)
+				data->object->pl_nbr++;
+			else if (data->map_cpy[y][x] == data->object->items)
+					data->object->it_nbr++;
+			else if (data->map_cpy[y][x] == data->object->exit)
+				data->object->ex_nbr++;
+			else
+				return (ft_error("Unavailable object\n", data, 3));
+		}
+		if (ft_strlen(data->map_cpy[y]) != ft_strlen(data->map_cpy[0]))
+			return (free_map(data->map_cpy),
+					ft_error("Error invalid map, should be a paralleloid\n", data, 3));
+	}
+}
+
+}
 
 void	ft_is_open(t_data *data, int size)
 {
@@ -52,6 +84,6 @@ void	is_valid(t_data *data, int size)
 {
 	set_objs(data);
 	ft_is_open(data, size - 2);
-//	check_content(data);
+	check_content(data);
 	//can_be_finished(data);
 }
