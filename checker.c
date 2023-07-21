@@ -55,7 +55,7 @@ static void	set_objs(t_data *data)
 
 void	is_valid(t_data *data, int size)
 {
-	set_obj(data);
+	set_objs(data);
 	ft_is_open(data, size - 1);
 	//check_content();
 	//can_be_finished(data);
