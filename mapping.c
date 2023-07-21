@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 20:21:49 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:27:11 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	mapping(t_data *data, char *argv)
 		ft_error("Error : map_cpy allocation", data, 1);
 	get_map(data, data->map, argv);
 	get_map(data, data->map_cpy, argv);
-	j = -1;
 	is_valid(data, j);
+	j = -1;
 	while (data->map[++j])
 	{
 		printf("%s\n", data->map[j]);

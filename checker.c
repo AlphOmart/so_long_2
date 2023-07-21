@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:25:56 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:26:50 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	set_objs(t_data *data)
 
 void	is_valid(t_data *data, int size)
 {
-	printf("size = %i\n", size);
+	(void)size;
 	set_objs(data);
 	ft_is_open(data, size - 1);
 	//check_content();
