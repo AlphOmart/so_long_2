@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:00:21 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:05:00 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	set_objs(t_data *data)
 {
 	data->object = malloc(sizeof(t_mapping) * 1);
 	if (!data->object)
-		return (ft_error(data, "Error : setting object\n", 1));
+		return (ft_error("Error : setting object\n", data, 1));
 	data->object->player = 'P';
 	data->object->items = 'C';
 	data->object->wall = '1';
