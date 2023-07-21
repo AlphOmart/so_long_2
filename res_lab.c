@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 22:43:48 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:12:53 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:22:16 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ static int	*get_pos(t_data *data, char **map, int *pos, char c)
 
 static void	resolution(char **map, int x, int y)
 {
-	if (map[x][y] == '1' || map[x][y] == 'X')
+	if (map[y][x] == '1' || map[y][x] == 'X')
 		return ;
-	map[x][y] = 'X';
+	map[y][x] = 'X';
 	resolution(map, x + 1, y);
 	resolution(map, x, y + 1);
 	resolution(map, x - 1, y);
