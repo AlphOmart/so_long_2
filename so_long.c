@@ -31,9 +31,6 @@ int	main(int argc, char **argv)
 	j = -1;
 	while (data->map[++j])
 		printf("%s\n", data->map_cpy[j]);
-	free(data->object);
-	free_map(data->map);
-	free_map(data->map_cpy);
-	free(data);
+	ft_free(data, 2);
 	return (0);
 }
