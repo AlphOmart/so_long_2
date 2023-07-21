@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:27:11 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:49:37 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	mapping(t_data *data, char *argv)
 {
 	int	j;
 
-	j = get_map_len(argv) + 1;
+	j = get_map_len(argv);
 	if (j == 0)
 		ft_error("Error : file not found\n", data, 0);
-	data->map = calloc(sizeof(char *), j);
+	data->map = calloc(sizeof(char *), j + 1);
 	if (!data->map)
 		ft_error("Error : map allocation", data, 0);
 	data->map_cpy = calloc(sizeof(char *), j);
@@ -30,7 +30,7 @@ void	mapping(t_data *data, char *argv)
 		ft_error("Error : map_cpy allocation", data, 1);
 	get_map(data, data->map, argv);
 	get_map(data, data->map_cpy, argv);
-	is_valid(data, j);
+	is_valid(data, j - 1);
 }
 
 static int	get_map_len(char *argv)
