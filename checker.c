@@ -21,6 +21,7 @@ void	ft_is_open(t_data *data, int size)
 	write(1, "1 ligne\n", 8);
 	write(1, &data->map_cpy[0][0], x);
 	write(1, "\n2 ligne\n", 9);
+	(void)size;
 //	write(1, &data->map_cpy[size - 4][0], x);
 //	while (data->map_cpy[0][x] && data->map_cpy[size - 2][x] && x > 0)
 //	{
