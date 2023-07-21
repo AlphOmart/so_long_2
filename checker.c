@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:13:07 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:13:47 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	ft_is_open(t_data *data, int size)
 	}
 	y = -1;
 	x = ft_strlen(data->map_cpy[0]) - 2;
-	printf("%i\n", x);
 	while (++y <= size -1)
 		if (data->map_cpy[y][0] != data->object->wall
 			|| data->map_cpy[y][x] != data->object->wall)
