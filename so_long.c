@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:07:49 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:56:17 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(int argc, char **argv)
 {
+	int	j;
 	t_data	*data;
 
 	if (argc != 2)
@@ -24,6 +25,12 @@ int	main(int argc, char **argv)
 	if (!data)
 		return ((int)write(2, "Error : data initialisation\n", 28));
 	mapping(data, argv[1]);
+	j = -1;
+	while (data->map[++j])
+		printf("%s\n", data->map[j]);
+	j = -1;
+	while (data->map[++j])
+		printf("%s\n", data->map_cpy[j]);
 	free(data->object);
 	free_map(data->map);
 	free_map(data->map_cpy);

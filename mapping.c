@@ -31,12 +31,6 @@ void	mapping(t_data *data, char *argv)
 	get_map(data, data->map, argv);
 	get_map(data, data->map_cpy, argv);
 	is_valid(data, j);
-	j = -1;
-	while (data->map[++j])
-	{
-		printf("%s\n", data->map[j]);
-		printf("%s\n", data->map_cpy[j]);
-	}
 }
 
 static int	get_map_len(char *argv)
