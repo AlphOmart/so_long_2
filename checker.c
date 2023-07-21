@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:11:55 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:12:39 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	is_valid(t_data *data, int size)
 {
 	(void)size;
 	set_objs(data);
-	//ft_is_open(data, size - 1);
+	ft_is_open(data, size - 1);
 	//check_content();
 	//can_be_finished(data);
 }
