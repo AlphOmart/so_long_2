@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 21:56:22 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 21:59:07 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,15 @@ void	ft_is_open(t_data *data, int size)
 			return (ft_error("map not closed\n", data, 2));
 		x--;
 	}
+	printf("%i\n", y);
 	y = -1;
 	x = ft_strlen(data->map_cpy[0]) - 2;
+	printf("%i\n", x);
 	while (++y < size - 1)
 		while (data->map_cpy[y][0] == data->object->wall
 		&& data->map_cpy[y][x] == data->object->wall)
 			y++;
-	if (y != size - 1)
+	if (y != size)
 		return (ft_error("Error : map not closed 2\n", data, 2));
 }
 
