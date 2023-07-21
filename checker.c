@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:42:54 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:58:42 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	is_valid(t_data *data, int size)
 	set_objs(data);
 	ft_is_open(data, size - 2);
 	check_content(data);
+	if (data->object->pl_nbr != 1 || data->object->it_nbr <= 0
+		|| data->object->ex_nbr != 1)
+		return (ft_error("map is invalid\n", data, 3));
 	can_be_finished(data);
 }
 
