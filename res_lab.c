@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 22:43:48 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:12:04 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:12:53 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	*get_pos(t_data *data, char **map, int *pos, char c)
 		x = -1;
 		while (map[y][++x])
 		{
-			if (map[y][x] == 'P')
+			if (map[y][x] == c)
 			{
 				pos[0] = x;
 				pos[1] = y;
