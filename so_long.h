@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:42:04 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:47:35 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ void	is_valid(t_data *data, int size);
 /*---mapping.c---------------------------------*/
 void	mapping(t_data *data, char *argv);
 
+/*---move.c------------------------------------*/
+int		key_press(int keysym, t_data *data);
 /*---render.c----------------------------------*/
 void	print_window(t_data *data);
 
