@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:59:41 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:04:05 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static void	check_content(t_data *data);
 void	is_valid(t_data *data, int size)
 {
 	set_objs(data);
-	ft_is_open(data, size - 2);
 	check_content(data);
 	if (data->object->pl_nbr != 1 || data->object->it_nbr <= 0
 		|| data->object->ex_nbr != 1)
-		return (ft_error("map is invalid\n", data, 2));
+		return (ft_error("Error : map is invalid\n", data, 2));
+	ft_is_open(data, size - 2);
 	can_be_finished(data);
 }
 
@@ -37,7 +37,7 @@ static void	ft_is_open(t_data *data, int size)
 	{
 		if (data->map_cpy[0][x] != data->object->wall ||
 			data->map_cpy[size][x] != data->object->wall)
-			return (ft_error("map not closed\n", data, 2));
+			return (ft_error("Error : map not closed\n", data, 2));
 		x--;
 	}
 	y = -1;
@@ -45,7 +45,7 @@ static void	ft_is_open(t_data *data, int size)
 	while (++y <= size)
 		if (data->map_cpy[y][0] != data->object->wall
 			|| data->map_cpy[y][x] != data->object->wall)
-			ft_error("Error : map not closed 2\n", data, 2);
+			ft_error("Error : map not closed\n", data, 2);
 }
 
 static void	set_objs(t_data *data)
@@ -85,7 +85,7 @@ static void	check_content(t_data *data)
 			else if (data->map_cpy[y][x] == data->object->exit)
 				data->object->ex_nbr++;
 			else
-				return (ft_error("Unavailable object\n", data, 3));
+				return (ft_error("Error : unavailable object\n", data, 3));
 		}
 		if (ft_strlen(data->map_cpy[y]) != ft_strlen(data->map_cpy[0]))
 			return (ft_error("Error : map should be a rectangle\n", data, 2));
