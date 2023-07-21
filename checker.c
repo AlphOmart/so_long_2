@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
+/*   Updated: 2023/07/21 21:00:21 by mwubneh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 void	ft_is_open(t_data *data, int size)
@@ -26,8 +38,24 @@ void	ft_is_open(t_data *data, int size)
 		return (ft_error("Error : map not closed 2\n", data, 2));
 }
 
+static void	set_objs(t_data *data)
+{
+	data->object = malloc(sizeof(t_mapping) * 1);
+	if (!data->object)
+		return (ft_error(data, "Error : setting object\n", 2));
+	data->object->player = 'P';
+	data->object->items = 'C';
+	data->object->wall = '1';
+	data->object->path = '0';
+	data->object->exit = 'E';
+	data->object->pl_nbr = 0;
+	data->object->it_nbr = 0;
+	data->object->ex_nbr = 0;
+}
+
 void	is_valid(t_data *data, int size)
 {
+	set_obj(data);
 	ft_is_open(data, size - 1);
 	//check_content();
 	//can_be_finished(data);
