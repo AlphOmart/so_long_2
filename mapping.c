@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:55:34 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 23:56:15 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	mapping(t_data *data, char *argv)
 	get_map(data, data->map, argv);
 	get_map(data, data->map_cpy, argv);
 	is_valid(data, j);
-	data->width = ft_strlen(data->map[0]) - 1;
+	data->width = ft_strlen(data->map[0]) - 2;
 	data->height = j - 1;
 	printf("height : %i\n",data->height);
 	printf("width : %i\n",data->width);
