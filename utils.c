@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 20:16:15 by mwubneh          ###   ########.fr       */
+/*   Created: 2023/07/21 20:13:05 by mwubneh           #+#    #+#             */
+/*   Updated: 2023/07/21 20:22:27 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int main(int argc, char **argv)
+void	free_map(char **map)
 {
-	t_data	*data;
+	int	i;
 
-	if (argc != 2)
-		return (write(2, "Usage : <./so_long> <map.ber>\n", 30));
-	if (ft_strncmp(&argv[1][ft_strlen(argv[1]) - 4], ".ber", 4))
-		return (write(2, "Error : invalid map format\n", 27));
-	data = malloc (sizeof(t_data) * 1);
-	if (!data)
-		return (write(2, "Error : data initialisation\n", 28));
-	mapping(data, argv[1]);
-	free_map(data->map);
-	free_map(data->map_cpy);
+	i = -1;
+	while (map[++i])
+		free(map[i]);
+	free(map);
+}
+
+void	ft_free(t_data *data, int n)
+{
+	if (n == 1)
+		free_map(data->map_cpy);
+	if (n == 0 || n == 1)
+		free_map(data->map);
 	free(data);
-	return (0);
+}
+
+void	ft_error(char *str, t_data *data, int n)
+{
+	ft_free(data, n);
+	write(2, str, ft_strlen(str));
+	exit(-1);
 }
