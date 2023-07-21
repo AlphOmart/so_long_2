@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 22:13:47 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/21 22:15:10 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ void	ft_is_open(t_data *data, int size)
 	int	x;
 
 	x = ft_strlen(data->map_cpy[0]) - 2;
-	while (data->map_cpy[0][x] && data->map_cpy[size - 1][x] && x > 0)
+	while (data->map_cpy[0][x] && data->map_cpy[size][x] && x > 0)
 	{
 		if (data->map_cpy[0][x] != data->object->wall ||
-			data->map_cpy[size - 1][x] != data->object->wall)
+			data->map_cpy[size][x] != data->object->wall)
 			return (ft_error("map not closed\n", data, 2));
 		x--;
 	}
 	y = -1;
 	x = ft_strlen(data->map_cpy[0]) - 2;
-	while (++y <= size -1)
+	while (++y <= size)
 		if (data->map_cpy[y][0] != data->object->wall
 			|| data->map_cpy[y][x] != data->object->wall)
 			ft_error("Error : map not closed 2\n", data, 2);
@@ -51,7 +51,7 @@ static void	set_objs(t_data *data)
 void	is_valid(t_data *data, int size)
 {
 	set_objs(data);
-	ft_is_open(data, size - 1);
-	//check_content();
+	ft_is_open(data, size - 2);
+//	check_content(data);
 	//can_be_finished(data);
 }
