@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:43:27 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:45:46 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	key_press(int keysym, t_data *data)
 
 	pos = NULL;
 	pos = get_pos(data, data->map, pos, 'P');
-	pos[0] = pos[0] / data->pic.height;
-	pos[1] = pos[1] / data->pic.width;
+	pos[0] = pos[0] / data->height;
+	pos[1] = pos[1] / data->width;
 	if (keysym == XK_Escape)
 	{
 		free(pos);
