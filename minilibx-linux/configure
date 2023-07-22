@@ -107,7 +107,7 @@ main(){
 	if [ -z "$xlib_inc" ]; then
 		log_error "Can't find a suitable X11 include directory."
 		exit 1
-#	fi
+  fi
 	#log_info "Found X11 include path directory: $xlib_inc"
 
 	#log_info 'Generate "makefile.gen" from template "makefile.mk"'
