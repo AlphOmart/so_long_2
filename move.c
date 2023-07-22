@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:33:00 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:36:48 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ static void	move_down(t_data *data);
 
 int	key_press(int keysym, t_data *data)
 {
+	int		*pos;
+
+	pos = NULL;
+	pos = get_pos(data, data->map, pos, 'P');
+	pos[0] = pos[0] / data->pic.height;
+	pos[1] = pos[1] / data->pic.width;
 	if (keysym == XK_Escape)
 		finish_game(data);
 //	if (keysym == XK_w)
@@ -140,14 +146,8 @@ static int	item_left(t_data *data)
 //	free(pos);
 //}
 //
-void	move_down(t_data *data)
+void	move_down(t_data *data, int *pos)
 {
-	int		*pos;
-
-	pos = NULL;
-	pos = get_pos(data, data->map, pos, 'P');
-	pos[0] = pos[0] / data->pic.height;
-	pos[1] = pos[1] / data->pic.width;
 	if (data->map[pos[1] + 1][pos[0]] != data->object->wall)
 	{
 		if (!(data->map[pos[1] + 1][pos[0]] == data->object->exit))
