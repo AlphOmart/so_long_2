@@ -39,7 +39,7 @@ mlx:
 $(OBJS_DIR)%.o:	%.c | dir
 				$(CC) $(FLAGS) -c $< -o $@
 
-dir:			$(OBJS_DIR))
+dir:			$(OBJS_DIR)
 
 $(OBJS_DIR):
 				@mkdir -p $(OBJS_DIR)
