@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 15:07:56 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 15:16:35 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
 int		ft_found(char *str, char nl);
-size_t	ft_strlen(const char	*s);
 
 #endif
