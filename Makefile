@@ -28,7 +28,7 @@ $(NAME):		$(OBJS) $(HEADER)
 
 lib:
 				echo "\033[0;33m\nCOMPILING $(LIBFT_PATH)\n"
-				@make -sC $(LIBFT_PATH)
+				@make -fsC $(LIBFT_PATH)
 				@echo "\033[1;32mLIBFT_lib created\n"
 
 mlx:
