@@ -36,12 +36,12 @@ mlx:
 				@make -sC $(MLX_PATH)
 				@echo "\033[1;32mMLX_lib created\n"
 
-$(OBJS_DIR)%.o:	%.c | $(OBJS_DIR)
+$(OBJS_DIR)%.o:	%.c | dir
 				$(CC) $(FLAGS) -c $< -o $@
 
-$(OBJS_DIR):	 dir
+dir:			$(OBJS_DIR))
 
-dir:
+$(OBJS_DIR):
 				@mkdir -p $(OBJS_DIR)
 
 clean:
