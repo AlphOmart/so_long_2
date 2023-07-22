@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:57:50 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:58:38 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	key_press(int keysym, t_data *data)
 //		move_right(data);
 //	if (keysym == XK_a)
 //		move_left(data);
-	if (keysym == 115)
+	if (keysym == XK_s)
 	{
 		move_down(data, pos);
 		free(pos);
