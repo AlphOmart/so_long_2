@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:31:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:08:54 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:11:08 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ void	set_pic(t_data *data)
 
 int	finish_game(t_data *data)
 {
-	if (!data->map)
+	if (data->map)
 	{
 		free_map(data->map);
 		free_map(data->map_cpy);
-		mlx_destroy_image(data->mlx_ptr, data->pic.wall);
-		mlx_destroy_image(data->mlx_ptr, data->pic.path);
-		mlx_destroy_image(data->mlx_ptr, data->pic.item);
-		mlx_destroy_image(data->mlx_ptr, data->pic.player);
-		mlx_destroy_image(data->mlx_ptr, data->pic.exit);
-		mlx_destroy_window(data->mlx_ptr, data->window);
+//		mlx_destroy_image(data->mlx_ptr, data->pic.wall);
+//		mlx_destroy_image(data->mlx_ptr, data->pic.path);
+//		mlx_destroy_image(data->mlx_ptr, data->pic.item);
+//		mlx_destroy_image(data->mlx_ptr, data->pic.player);
+//		mlx_destroy_image(data->mlx_ptr, data->pic.exit);
+//		mlx_destroy_window(data->mlx_ptr, data->window);
 	}
 	mlx_destroy_display(data->mlx_ptr);
 	free(data->mlx_ptr);
