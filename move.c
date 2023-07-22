@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:51:45 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:57:50 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	key_press(int keysym, t_data *data)
 
 	pos = NULL;
 	pos = get_pos(data, data->map, pos, 'P');
-	pos[0] = pos[0] / data->pic.height;
-	pos[1] = pos[1] / data->pic.width;
 	if (keysym == XK_Escape)
 	{
 		free(pos);
@@ -154,12 +152,17 @@ static int	item_left(t_data *data)
 //
 void	move_down(t_data *data, int *pos)
 {
-	if (data->map[pos[1] + 1][pos[0]] != data->object->wall)
+	int x;
+	int y;
+
+	x = pos[0] / data->pic.height;
+	y = pos[1] / data->pic.width;
+	if (data->map[y + 1][x] != data->object->wall)
 	{
-		if (data->map[pos[1] + 1][pos[0]] != data->object->exit)
+		if (data->map[y + 1][x] != data->object->exit)
 		{
-			data->map[pos[1] + 1][pos[0]] = data->object->player;
-			data->map[pos[1]][pos[0]] = data->object->path;
+			data->map[y+ 1][x] = data->object->player;
+			data->map[y][x] = data->object->path;
 			data->count += 1;
 			printf("count: %d\n", data->count);
 		}
