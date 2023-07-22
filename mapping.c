@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 11:55:33 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:28:04 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	mapping(t_data *data, char *argv)
 	is_valid(data, j);
 	data->width = ft_strlen(data->map[0]) - 1;
 	data->height = j - 1;
+	data->count = 0;
 }
 
 static int	get_map_len(char *argv)
