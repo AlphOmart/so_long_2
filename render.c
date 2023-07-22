@@ -26,7 +26,7 @@ void	print_window(t_data *data)
 		return (ft_error("Error : windows creation failed\n", data, 3));
 	mlx_loop_hook(data->mlx_ptr, &print, data);
 	mlx_hook(data->window, KeyRelease, KeyReleaseMask, &key_press, data);
-	mlx_hook(data->window, 0, 17, &finish_game, data);
+	mlx_hook(data->window, 17, 0, &finish_game, data);
 	mlx_loop(data->mlx_ptr);
 	finish_game(data);
 }

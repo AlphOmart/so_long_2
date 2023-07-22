@@ -1,7 +1,7 @@
 #---COMMON_VAR-----------------------------------
 NAME		=	so_long
 CC			=	cc
-FLAGS		=	-Wall -Werror -Wextra
+FLAGS		=	-Wall -Werror -Wextra -O
 #---LIBFT_VAR-------------------------------------
 LIBFT_PATH	=	libft/
 LIBFT_SRC	=	libft.a
@@ -39,7 +39,9 @@ mlx:
 $(OBJS_DIR)%.o:	%.c | $(OBJS_DIR)
 				$(CC) $(FLAGS) -c $< -o $@
 
-$(OBJS_DIR):
+$(OBJS_DIR):			| dir
+
+dir:
 				@mkdir -p $(OBJS_DIR)
 
 clean:
