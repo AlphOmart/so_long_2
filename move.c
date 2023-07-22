@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:21:44 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:24:55 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	key_press(int keysym, t_data *data)
 
 	pos = NULL;
 	pos = get_pos(data, data->map, pos, 'P');
-	printf("pos[0] = %i\n", pos[0]);
-	printf("pos[1] = %i\n", pos[1]);
 	if (keysym == XK_Escape)
 	{
 		free(pos);
@@ -69,7 +67,7 @@ static void	move_top(t_data *data, int *pos)
 	y = pos[1];
 	if (data->map[y - 1][x] != data->object->wall)
 	{
-		if (!(data->map[y - 1][x] == data->object->exit))
+		if (data->map[y - 1][x] != data->object->exit)
 		{
 			data->map[y - 1][x] = data->object->player;
 			data->map[y][x] = data->object->path;
@@ -81,6 +79,7 @@ static void	move_top(t_data *data, int *pos)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -94,9 +93,9 @@ void	move_right(t_data *data, int *pos)
 
 	x = pos[0];
 	y = pos[1];
-	if (data->map[y][x+ 1] != data->object->wall)
+	if (data->map[y][x + 1] != data->object->wall)
 	{
-		if (!(data->map[y][x + 1] == data->object->exit))
+		if (data->map[y][x + 1] != data->object->exit)
 		{
 			data->map[y][x + 1] = data->object->player;
 			data->map[y][x] = data->object->path;
@@ -108,6 +107,7 @@ void	move_right(t_data *data, int *pos)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -135,6 +135,7 @@ void	move_left(t_data *data, int *pos)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -162,6 +163,7 @@ void	move_down(t_data *data, int *pos)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
