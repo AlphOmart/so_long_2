@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:10:13 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:11:27 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,8 +157,8 @@ void	move_down(t_data *data, int *pos)
 	int x;
 	int y;
 
-	x = pos[0] / data->pic.height;
-	y = pos[1] / data->pic.width;
+	x = pos[0];
+	y = pos[1];
 	printf("x = %i\n", x);
 	printf("width= %i\n", data->pic.width);
 	printf("height = %i\n", data->pic.height);
