@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:44:56 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:20:45 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <X11/keysym.h>
 # include <X11/X.h>
 # include <fcntl.h>
+# include <errno.h>
 /*---STRUCTURES--------------------------------*/
 typedef struct s_pictures
 {
