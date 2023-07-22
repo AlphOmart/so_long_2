@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:31:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:14:35 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:24:56 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int	finish_game(t_data *data)
 	free(data->mlx_ptr);
 	free(data->object);
 	free(data);
-	return (0);
+	exit(0);
 }
