@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 17:16:53 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:19:57 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	get_map_len(char *argv)
 	char	*line;
 
 	fd = open(argv, O_RDONLY);
-	if (fd <= 0)
+	if (fd <= 0 || errno == ENOENT)
 		return (-2);
 	i = 0;
 	while (42)
