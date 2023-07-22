@@ -6,15 +6,15 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:19:45 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:20:39 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void	move_top(t_data *data);
-static void	move_right(t_data *data);
-static void	move_left(t_data *data);
+static void	move_top(t_data *data, int *pos);
+static void	move_right(t_data *data, int *pos);
+static void	move_left(t_data *data, int *pos);
 static void	move_down(t_data *data, int *pos);
 
 int	key_press(int keysym, t_data *data)
