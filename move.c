@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:30:35 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:19:53 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int	key_press(int keysym, t_data *data)
 {
 	if (keysym == XK_Escape)
 		finish_game(data);
-	if (keysym == XK_w)
-		move_top(data);
-	if (keysym == XK_d)
-		move_right(data);
-	if (keysym == XK_a)
-		move_left(data);
-	if (keysym == XK_s)
-		move_down(data);
+//	if (keysym == XK_w)
+//		move_top(data);
+//	if (keysym == XK_d)
+//		move_right(data);
+//	if (keysym == XK_a)
+//		move_left(data);
+//	if (keysym == XK_s)
+//		move_down(data);
 	return (0);
 }
 
