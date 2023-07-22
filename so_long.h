@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:47:35 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:23:59 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 # include "libft/libft.h"
 # include "minilibx-linux/mlx.h"
 # include "minilibx-linux/mlx_int.h"
-
+# include <string.h>
+# include <X11/keysym.h>
+# include <X11/X.h>
+# include <fcntl.h>
 /*---STRUCTURES--------------------------------*/
 typedef struct s_pictures
 {
