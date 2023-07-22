@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:02:43 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:06:55 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	main(int argc, char **argv)
 	mapping(data, argv[1]);
 	data->mlx_ptr = mlx_init();
 	if (data->map)
-	{
-		set_pic(data);
+	{;
+		//set_pic(data);
 		//print_window(data);
 	}
 	else
