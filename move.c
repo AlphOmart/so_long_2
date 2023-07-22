@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:05:35 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:08:05 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,6 +159,8 @@ void	move_down(t_data *data, int *pos)
 
 	x = pos[0] / data->pic.height;
 	y = pos[1] / data->pic.width;
+	printf("x = %i\n", x);
+	printf("y = %i\n", y);
 	if (data->map[y + 1][x] != data->object->wall)
 	{
 		if (data->map[y + 1][x] != data->object->exit)
