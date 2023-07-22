@@ -65,7 +65,7 @@ static char	**get_map(t_data *data, char **map, char *argv)
 	int	i;
 
 	fd = open(argv, O_RDONLY);
-	if (fd < 0)
+	if (fd <= 0)
 		ft_error("Error : bad file access\n", data, 1);
 	i = 0;
 	while (42)
