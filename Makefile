@@ -19,21 +19,20 @@ OBJS		=	$(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 HEADER		=	so_long.h
 #---RULES----------------------------------------
 
-all:			$(NAME)
+all:		lib mlx	$(NAME)
 
-$(NAME):		$(OBJS) $(HEADER)
-				$(lib)
-				$(mlx)
+$(NAME):			$(OBJS) $(HEADER)
+			
 				@echo "\033[0;33m\nCOMPILING SO_LONG...\n"
 				$(CC) $(FLAGS) $(OBJS) $(LIBFT) $(MLX_EX) -o $@
 				@echo "\033[1;32m./so_long created\n"
 
-$(lib):
+lib:
 				echo "\033[0;33m\nCOMPILING $(LIBFT_PATH)\n"
 				@make -sC $(LIBFT_PATH)
 				@echo "\033[1;32mLIBFT_lib created\n"
 
-$(mlx):
+mlx:
 				@echo "\033[0;33m\nCOMPILING $(MLX_PATH)...\n"
 				@make -sC $(MLX_PATH)
 				@echo "\033[1;32mMLX_lib created\n"
