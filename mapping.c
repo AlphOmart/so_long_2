@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 16:48:31 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:16:53 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	mapping(t_data *data, char *argv)
 	int	j;
 
 	j = get_map_len(argv) + 1;
-	if (j == 0)
+	if (j <= 0)
 		ft_error("Error : file not found\n", data, 0);
 	data->map = calloc(sizeof(char *), j);
 	if (!data->map)
@@ -65,7 +65,7 @@ static char	**get_map(t_data *data, char **map, char *argv)
 	int	i;
 
 	fd = open(argv, O_RDONLY);
-	if (fd <= 0)
+	if (fd < 0)
 		ft_error("Error : bad file access\n", data, 1);
 	i = 0;
 	while (42)
