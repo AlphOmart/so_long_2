@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:38:21 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:39:25 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 11:52:57 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ void	print_window(t_data *data)
 	data->window = mlx_new_window(data->mlx_ptr,
 			(data->width * data->pic.width), (data->height * data->pic.height),
 			"so_long");
-	if (data->window == NULL)
-	{
-		free(data->mlx_ptr);
-		return ;
-	}
+	if (!data->window)
+		return (ft_error("Error : windows creation failed\n", data, 3));
 	mlx_loop_hook(data->mlx_ptr, &print, data);
 	mlx_hook(data->window, 2, 1L << 0, &key_press, data);
 	mlx_hook(data->window, 0, 17, &finish_game, data);

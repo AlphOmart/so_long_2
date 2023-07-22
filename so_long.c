@@ -25,15 +25,10 @@ int	main(int argc, char **argv)
 		return ((int)write(2, "Error : data initialisation\n", 28));
 	mapping(data, argv[1]);
 	data->mlx_ptr = mlx_init();
-	data->window = mlx_new_window(data->mlx_ptr,
-			(data->width * data->pic.width), (data->height * data->pic.height),
-			"So_long");
-	if (!data->window)
-		return (ft_error("Error : windows creation failed\n", data, 3), -1);
 	if (data->map)
 	{
 		set_pic(data);
-	//	print_window(data);
+		print_window(data);
 	}
 	else
 		finish_game(data);
