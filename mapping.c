@@ -6,22 +6,20 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 17:19:57 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:56:46 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int		get_map_len(char *argv);
+static int		get_map_len(char *argv, t_data *data);
 static char		**get_map(t_data *data, char **map, char *argv);
 
 void	mapping(t_data *data, char *argv)
 {
 	int	j;
 
-	j = get_map_len(argv) + 1;
-	if (j <= 0)
-		ft_error("Error : file not found\n", data, 0);
+	j = get_map_len(argv, data) + 1;
 	data->map = calloc(sizeof(char *), j);
 	if (!data->map)
 		ft_error("Error : map allocation", data, 0);
@@ -36,15 +34,15 @@ void	mapping(t_data *data, char *argv)
 	data->count = 0;
 }
 
-static int	get_map_len(char *argv)
+static int	get_map_len(char *argv,t_data *data)
 {
 	int		fd;
 	int		i;
 	char	*line;
 
 	fd = open(argv, O_RDONLY);
-	if (fd <= 0 || errno == ENOENT)
-		return (-2);
+	if (fd < 0)
+		return (ft_error("Error : file not found\n", data, -1), NULL);
 	i = 0;
 	while (42)
 	{
