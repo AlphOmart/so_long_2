@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:38:21 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:19:39 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:47:03 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	print_window(t_data *data)
 		return (ft_error("Error : windows creation failed\n", data, 3));
 	mlx_loop_hook(data->mlx_ptr, &print, data);
 	mlx_hook(data->window, KeyRelease, KeyReleaseMask, &key_press, data);
-	//mlx_hook(data->window, 0, 17, &finish_game, data);
+	mlx_hook(data->window, 0, 17, &finish_game, data);
 	mlx_loop(data->mlx_ptr);
 	finish_game(data);
 }
