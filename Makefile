@@ -27,8 +27,8 @@ $(NAME):		$(OBJS) $(HEADER)
 				@echo "\033[1;32m./so_long created\n"
 
 lib:
-				echo "\033[0;33m\nCOMPILING $(LIBFT_PATH)\n"
-				@make -sC $(LIBFT_PATH)
+				@echo "\033[0;33m\nCOMPILING $(LIBFT_PATH)\n"
+				@make -C $(LIBFT_PATH)
 				@echo "\033[1;32mLIBFT_lib created\n"
 
 mlx:
