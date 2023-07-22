@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:29:26 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:30:35 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ static void	move_top(t_data *data)
 
 	pos = NULL;
 	pos = get_pos(data, data->map, pos, 'P');
-	pos[0] = pos[0] / data->pic.width;
-	pos[1] = pos[1] / data->pic.height;
+	pos[0] = pos[0] / data->pic.height;
+	pos[1] = pos[1] / data->pic.width;
 	if (data->map[pos[1] - 1][pos[0]] != data->object->wall)
 	{
 		if (!(data->map[pos[1] - 1][pos[0]] == data->object->exit))
