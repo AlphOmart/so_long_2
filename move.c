@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:45:14 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 15:11:28 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,13 @@ static void	move_top(t_data *data, int *pos)
 			data->map[y - 1][x] = data->object->player;
 			data->map[y][x] = data->object->path;
 			data->count += 1;
-			printf("count: %d\n", data->count);
+			ft_printf("count: %d\n", data->count);
 		}
 		else
 		{
 			if (item_left(data) == 0)
 			{
-				printf("Congrats you won with : %d moves !\n", data->count);
+				ft_printf("Congrats you won with : %d moves !\n", data->count);
 				free(pos);
 				finish_game(data);
 			}
@@ -82,13 +82,13 @@ void	move_right(t_data *data, int *pos)
 			data->map[y][x + 1] = data->object->player;
 			data->map[y][x] = data->object->path;
 			data->count += 1;
-			printf("count: %d\n", data->count);
+			ft_printf("count: %d\n", data->count);
 		}
 		else
 		{
 			if (item_left(data) == 0)
 			{
-				printf("Congrats you won with : %d moves !\n", data->count);
+				ft_printf("Congrats you won with : %d moves !\n", data->count);
 				free(pos);
 				finish_game(data);
 			}
@@ -110,13 +110,13 @@ void	move_left(t_data *data, int *pos)
 			data->map[y][x - 1] = data->object->player;
 			data->map[y][x] = data->object->path;
 			data->count += 1;
-			printf("count: %d\n", data->count);
+			ft_printf("count: %d\n", data->count);
 		}
 		else
 		{
 			if (item_left(data) == 0)
 			{
-				printf("Congrats you won with : %d moves !\n", data->count);
+				ft_printf("Congrats you won with : %d moves !\n", data->count);
 				free(pos);
 				finish_game(data);
 			}
@@ -138,13 +138,13 @@ void	move_down(t_data *data, int *pos)
 			data->map[y + 1][x] = data->object->player;
 			data->map[y][x] = data->object->path;
 			data->count += 1;
-			printf("count: %d\n", data->count);
+			ft_printf("count: %d\n", data->count);
 		}
 		else
 		{
 			if (item_left(data) == 0)
 			{
-				printf("Congrats you won with : %d moves !\n", data->count);
+				ft_printf("Congrats you won with : %d moves !\n", data->count);
 				free(pos);
 				finish_game(data);
 			}
