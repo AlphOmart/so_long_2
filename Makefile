@@ -19,9 +19,9 @@ OBJS		=	$(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 HEADER		=	so_long.h
 #---RULES----------------------------------------
 
-all:		lib mlx	$(NAME)
+all:			lib mlx	$(NAME)
 
-$(NAME):			$(OBJS) $(HEADER)
+$(NAME):		$(OBJS) $(HEADER)
 			
 				@echo "\033[0;33m\nCOMPILING SO_LONG...\n"
 				$(CC) $(FLAGS) $(OBJS) $(LIBFT) $(MLX_EX) -o $@
@@ -40,7 +40,7 @@ mlx:
 $(OBJS_DIR)%.o:	%.c | $(OBJS_DIR)
 				$(CC) $(FLAGS) -c $< -o $@
 
-$(OBJS_DIR):			| dir
+$(OBJS_DIR):	 dir
 
 dir:
 				@mkdir -p $(OBJS_DIR)
