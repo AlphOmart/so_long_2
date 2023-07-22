@@ -45,7 +45,6 @@ int	finish_game(t_data *data)
 		mlx_destroy_window(data->mlx_ptr, data->window);
 	}
 	mlx_destroy_display(data->mlx_ptr);
-	free(data->window);
 //	ft_free(data, 3);
 	return (0);
 }
