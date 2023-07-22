@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 11:35:06 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 11:35:47 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	main(int argc, char **argv)
 	data->mlx_ptr = mlx_init();
 	if (data->map)
 	{
-//		set_pic(data);
+		set_pic(data);
 //		print_window(data);
-//	}
+	}
 //	else
 //		finish_game(data);
 	mlx_destroy_display(data->mlx_ptr);
