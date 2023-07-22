@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:00:43 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:02:43 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int	main(int argc, char **argv)
 	}
 	else
 		finish_game(data);
-	ft_free(data, 3);
+	//ft_free(data, 3);
 	return (0);
 }

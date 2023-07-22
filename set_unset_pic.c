@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:31:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:00:49 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:02:09 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	set_pic(t_data *data)
 
 int	finish_game(t_data *data)
 {
-	if (data->map != NULL)
+	if (!data->map)
 	{
 		mlx_destroy_image(data->mlx_ptr, data->pic.wall);
 		mlx_destroy_image(data->mlx_ptr, data->pic.path);
