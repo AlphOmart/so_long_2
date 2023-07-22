@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 14:24:55 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:45:14 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,6 @@ int	key_press(int keysym, t_data *data)
 		move_down(data, pos);
 	free(pos);
 	return (0);
-}
-
-static int	item_left(t_data *data)
-{
-	int		x;
-	int		y;
-	int		it_nbr;
-
-	it_nbr = 0;
-	y = -1;
-	while (data->map[++y])
-	{
-		x = -1;
-		while (data->map[y][++x])
-			if (data->map[y][x] == data->object->items)
-				it_nbr++;
-	}
-	return (it_nbr);
 }
 
 static void	move_top(t_data *data, int *pos)
@@ -153,7 +135,7 @@ void	move_down(t_data *data, int *pos)
 	{
 		if (data->map[y + 1][x] != data->object->exit)
 		{
-			data->map[y+ 1][x] = data->object->player;
+			data->map[y + 1][x] = data->object->player;
 			data->map[y][x] = data->object->path;
 			data->count += 1;
 			printf("count: %d\n", data->count);

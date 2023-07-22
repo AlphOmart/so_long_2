@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 12:23:59 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:44:56 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ typedef struct s_data
 
 /*---checker.c---------------------------------*/
 void	is_valid(t_data *data, int size);
-
+int		item_left(t_data *data);
 /*---mapping.c---------------------------------*/
 void	mapping(t_data *data, char *argv);
 

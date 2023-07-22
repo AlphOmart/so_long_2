@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:57:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/21 23:04:05 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:45:27 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,22 @@ static void	check_content(t_data *data)
 		if (ft_strlen(data->map_cpy[y]) != ft_strlen(data->map_cpy[0]))
 			return (ft_error("Error : map should be a rectangle\n", data, 2));
 	}
+}
+
+int	item_left(t_data *data)
+{
+	int		x;
+	int		y;
+	int		it_nbr;
+
+	it_nbr = 0;
+	y = -1;
+	while (data->map[++y])
+	{
+		x = -1;
+		while (data->map[y][++x])
+			if (data->map[y][x] == data->object->items)
+				it_nbr++;
+	}
+	return (it_nbr);
 }
