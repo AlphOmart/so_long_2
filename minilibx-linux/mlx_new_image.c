@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mlx_new_image.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/22 15:20:59 by mwubneh           #+#    #+#             */
+/*   Updated: 2023/07/22 20:29:30 by mwubneh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 ** mlx_new_image.c for MiniLibX in raytraceur
 ** 
@@ -23,9 +35,12 @@ int	mlx_X_error;
 
 int	shm_att_pb(Display *d,XErrorEvent *ev)
 {
-  if (ev->request_code==146 && ev->minor_code==X_ShmAttach)
-    write(2,WARN_SHM_ATTACH,strlen(WARN_SHM_ATTACH));
-  mlx_X_error = 1;
+	int	i;
+
+	if (ev->request_code == 146 && ev->minor_code == X_ShmAttach)
+		i = write(2, WARN_SHM_ATTACH, strlen(WARN_SHM_ATTACH));
+	(void) i;
+	mlx_X_error = 1;
 }
 
 
