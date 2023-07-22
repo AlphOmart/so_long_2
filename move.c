@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 15:35:39 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 15:37:51 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ static void	move_top(t_data *data, int *pos)
 			data->map[y][x] = data->object->path;
 			data->count += 1;
 			ft_printf("count: %d\n", data->count);
-			mlx_string_put(data->mlx_ptr, data->window, 12323, 32321,132, "jesuisla\n");
 		}
 		else
 		{
