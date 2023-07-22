@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:58:38 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 14:01:03 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	key_press(int keysym, t_data *data)
 
 	pos = NULL;
 	pos = get_pos(data, data->map, pos, 'P');
+	printf("pos[0] = %i", pos[0]);
+	printf("pos[1] = %i", pos[1]);
 	if (keysym == XK_Escape)
 	{
 		free(pos);
