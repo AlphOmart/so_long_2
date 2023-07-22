@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:31:24 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:31:53 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //static void	move_top(t_data *data);
 //static void	move_right(t_data *data);
 //static void	move_left(t_data *data);
-//static void	move_down(t_data *data);
+static void	move_down(t_data *data);
 
 int	key_press(int keysym, t_data *data)
 {
