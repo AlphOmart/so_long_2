@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 13:39:51 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:43:27 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int	key_press(int keysym, t_data *data)
 	pos[0] = pos[0] / data->pic.height;
 	pos[1] = pos[1] / data->pic.width;
 	if (keysym == XK_Escape)
+	{
+		free(pos);
 		finish_game(data);
+	}
 //	if (keysym == XK_w)
 //		move_top(data);
 //	if (keysym == XK_d)
@@ -150,7 +153,7 @@ void	move_down(t_data *data, int *pos)
 {
 	if (data->map[pos[1] + 1][pos[0]] != data->object->wall)
 	{
-		if (!(data->map[pos[1] + 1][pos[0]] == data->object->exit))
+		if (data->map[pos[1] + 1][pos[0]] != data->object->exit)
 		{
 			data->map[pos[1] + 1][pos[0]] = data->object->player;
 			data->map[pos[1]][pos[0]] = data->object->path;
