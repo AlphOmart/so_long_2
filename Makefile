@@ -21,7 +21,9 @@ HEADER		=	so_long.h
 
 all:			$(NAME)
 
-$(NAME):		lib mlx $(OBJS) $(HEADER)
+$(NAME):		$(OBJS) $(HEADER)
+				lib
+				mlx
 				@echo "\033[0;33m\nCOMPILING SO_LONG...\n"
 				$(CC) $(FLAGS) $(OBJS) $(LIBFT) $(MLX_EX) -o $@
 				@echo "\033[1;32m./so_long created\n"

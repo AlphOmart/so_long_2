@@ -34,7 +34,7 @@ void	mapping(t_data *data, char *argv)
 	data->count = 0;
 }
 
-static int	get_map_len(char *argv,t_data *data)
+static int	get_map_len(char *argv, t_data *data)
 {
 	int		fd;
 	int		i;
