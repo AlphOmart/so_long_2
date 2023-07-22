@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 11:40:49 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 11:42:48 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ int	main(int argc, char **argv)
 		return ((int)write(2, "Error : data initialisation\n", 28));
 	mapping(data, argv[1]);
 	data->mlx_ptr = mlx_init();
-	//if (data->map)
-//	{
-//		set_pic(data);
-//		print_window(data);
-	//}
-	//else
-//		finish_game(data);
+	if (data->map)
+	{
+		set_pic(data);
+		print_window(data);
+	}
+	else
+		finish_game(data);
 	ft_free(data, 3);
 	return (0);
 }
