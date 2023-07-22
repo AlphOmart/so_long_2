@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:12:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 17:56:46 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:58:52 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	get_map_len(char *argv,t_data *data)
 
 	fd = open(argv, O_RDONLY);
 	if (fd < 0)
-		return (ft_error("Error : file not found\n", data, -1), NULL);
+		return (ft_error("Error : file not found\n", data, -1), -1);
 	i = 0;
 	while (42)
 	{
