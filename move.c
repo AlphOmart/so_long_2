@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 00:04:44 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/22 12:20:31 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ static void	move_top(t_data *data)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -101,6 +102,7 @@ void	move_right(t_data *data)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -130,6 +132,7 @@ void	move_left(t_data *data)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
@@ -159,6 +162,7 @@ void	move_down(t_data *data)
 			if (item_left(data) == 0)
 			{
 				printf("Congrats you won with : %d moves !\n", data->count);
+				free(pos);
 				finish_game(data);
 			}
 		}
