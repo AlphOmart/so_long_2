@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 13:29:36 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 13:33:22 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ int	key_press(int keysym, t_data *data)
 	if (keysym == XK_s)
 		move_down(data, pos);
 	free(pos);
-	mlx_destroy_image(data->mlx_ptr, data->pic.wall);
-	mlx_destroy_image(data->mlx_ptr, data->pic.path);
-	mlx_destroy_image(data->mlx_ptr, data->pic.item);
-	mlx_destroy_image(data->mlx_ptr, data->pic.player);
-	mlx_destroy_image(data->mlx_ptr, data->pic.exit);
 	print(data);
 	return (0);
 }
