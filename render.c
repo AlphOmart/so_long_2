@@ -12,10 +12,10 @@
 
 #include "so_long.h"
 
-static int	print(t_data *data);
-static void	print_back(t_data *data);
-static void	print_front(t_data *data);
-static void	print_img(t_data *data, void *img, int x, int y);
+//static int	print(t_data *data);
+//static void	print_back(t_data *data);
+//static void	print_front(t_data *data);
+//static void	print_img(t_data *data, void *img, int x, int y);
 
 void	print_window(t_data *data)
 {
