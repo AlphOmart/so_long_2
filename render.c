@@ -6,13 +6,12 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:38:21 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 13:21:12 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 13:32:08 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int	print(t_data *data);
 static void	print_back(t_data *data);
 static void	print_front(t_data *data);
 static void	print_img(t_data *data, void *img, int x, int y);
