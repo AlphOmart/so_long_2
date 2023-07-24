@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 20:11:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 12:39:54 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 12:57:00 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 	if (!data)
 		return ((int)write(2, "Error : data initialisation\n", 28));
 	mapping(data, argv[1]);
+	data->print = 0;
 	data->mlx_ptr = mlx_init();
 	if (!data->mlx_ptr)
 		return (ft_error("Error : env isn't set.", data, 2), -1);

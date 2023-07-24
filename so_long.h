@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/22 17:20:45 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 12:56:41 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ typedef struct s_data
 	int			count;
 	int			width;
 	int			height;
+	int			print;
 }				t_data;
 
 /*---checker.c---------------------------------*/
