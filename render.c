@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:38:21 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 13:05:16 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 13:05:47 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static int	print(t_data *data)
 {
 	static int i = 0;
 	printf("%d\n", i++);
+	(void)data;
 //	print_back(data);
 //	print_front(data);
 	return (0);
