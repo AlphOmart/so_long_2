@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 12:50:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 12:56:41 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/24 13:27:00 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	mapping(t_data *data, char *argv);
 int		key_press(int keysym, t_data *data);
 /*---render.c----------------------------------*/
 void	print_window(t_data *data);
-
+int		print(t_data *data)
 /*---res_lab.c---------------------------------*/
 void	can_be_finished(t_data *data);
 int		*get_pos(t_data *data, char **map, int *pos, char c);
