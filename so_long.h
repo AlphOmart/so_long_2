@@ -63,7 +63,6 @@ typedef struct s_data
 	int			count;
 	int			width;
 	int			height;
-	int			print;
 }				t_data;
 
 /*---checker.c---------------------------------*/
