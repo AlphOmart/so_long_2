@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 23:41:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2023/07/24 16:16:45 by mwubneh          ###   ########.fr       */
+/*   Updated: 2023/07/25 22:55:05 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	key_press(int keysym, t_data *data)
 		move_left(data, pos);
 	if (keysym == XK_s)
 		move_down(data, pos);
+	print(data);
 	free(pos);
 	return (0);
 }
@@ -60,7 +61,6 @@ static void	move_top(t_data *data, int *pos)
 		{
 			if (item_left(data) == 0)
 			{
-				ft_printf("Congrats you won with : %d moves !\n", data->count);
 				free(pos);
 				finish_game(data);
 			}
